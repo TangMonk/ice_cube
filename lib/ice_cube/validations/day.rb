@@ -50,17 +50,8 @@ module IceCube
       end
 
       StringBuilder.register_formatter(:day) do |validation_days|
-        # sort the days
-        validation_days.sort!
-        # pick the right shortening, if applicable
-        if validation_days == [0, 6]
-          'on Weekends'
-        elsif validation_days == (1..5).to_a
-          'on Weekdays'
-        else
-          segments = validation_days.map { |d| "#{Date::DAYNAMES[d]}s" }
-          "on #{StringBuilder.sentence(segments)}"
-        end
+        segments = validation_days.map { |d| I18n.t("date.day_names")[d] }
+        "的 #{StringBuilder.sentence(segments)}"
       end
 
     end

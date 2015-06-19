@@ -35,7 +35,7 @@ module IceCube
       end
 
       def build_s(builder)
-        builder.base = interval == 1 ? 'Hourly' : "Every #{interval} hours"
+        builder.base = interval == 1 ? '小时' : "每 #{interval} 小时"
       end
 
       def build_hash(builder)

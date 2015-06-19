@@ -44,7 +44,7 @@ module IceCube
       end
 
       def build_s(builder)
-        builder.base = interval == 1 ? 'Weekly' : "Every #{interval} weeks"
+        builder.base = interval == 1 ? '每周' : "每 #{interval} 周"
       end
 
       def build_hash(builder)

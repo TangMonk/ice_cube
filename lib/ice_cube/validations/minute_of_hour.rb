@@ -43,8 +43,8 @@ module IceCube
       end
 
       StringBuilder.register_formatter(:minute_of_hour) do |segments|
-        str = "on the #{StringBuilder.sentence(segments)} "
-        str << (segments.size == 1 ? 'minute of the hour' : 'minutes of the hour')
+        str = "每小时的第 #{StringBuilder.sentence(segments)} "
+        str << (segments.size == 1 ? '分钟' : '分钟')
       end
 
     end

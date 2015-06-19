@@ -44,8 +44,8 @@ module IceCube
       end
 
       StringBuilder.register_formatter(:hour_of_day) do |segments|
-        str = "on the #{StringBuilder.sentence(segments)} "
-        str << (segments.size == 1 ? 'hour of the day' : 'hours of the day')
+        str = "每天的第 #{StringBuilder.sentence(segments)} "
+        str << (segments.size == 1 ? '小时' : '小时')
       end
 
     end

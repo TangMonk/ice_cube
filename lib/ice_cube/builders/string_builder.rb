@@ -42,16 +42,16 @@ module IceCube
         case array.length
         when 0 ; ''
         when 1 ; array[0].to_s
-        when 2 ; "#{array[0]} and #{array[1]}"
-        else ; "#{array[0...-1].join(', ')}, and #{array[-1]}"
+        when 2 ; "#{array[0]} 和 #{array[1]}"
+        else ; "#{array[0...-1].join(', ')}, 和 #{array[-1]}"
         end
       end
 
       def nice_number(number)
-        return 'last' if number == -1
-        suffix = SPECIAL_SUFFIX[number] || NUMBER_SUFFIX[number.abs % 10]
+        return '最后一' if number == -1
+        suffix = number
         if number < -1
-          number.abs.to_s << suffix << ' to last'
+          number.abs.to_s << suffix << '最后一'
         else
           number.to_s << suffix
         end

@@ -43,8 +43,8 @@ module IceCube
       end
 
       StringBuilder.register_formatter(:second_of_minute) do |segments|
-        str = "on the #{StringBuilder.sentence(segments)} "
-        str << (segments.size == 1 ? 'second of the minute' : 'seconds of the minute')
+        str = "在每分钟的第 #{StringBuilder.sentence(segments)} "
+        str << (segments.size == 1 ? '秒' : '秒')
       end
 
     end

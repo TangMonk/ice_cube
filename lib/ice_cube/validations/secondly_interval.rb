@@ -32,7 +32,7 @@ module IceCube
       end
 
       def build_s(builder)
-        builder.base = interval == 1 ? 'Secondly' : "Every #{interval} seconds"
+        builder.base = interval == 1 ? '秒' : "每 #{interval} 秒"
       end
 
       def build_hash(builder)

@@ -49,8 +49,8 @@ module IceCube
       end
 
       StringBuilder.register_formatter(:day_of_year) do |entries|
-        str = "on the #{StringBuilder.sentence(entries)} "
-        str << (entries.size == 1 ? 'day of the year' : 'days of the year')
+        str = "每年的第 #{StringBuilder.sentence(entries)} "
+        str << (entries.size == 1 ? '天' : '天')
         str
       end
 

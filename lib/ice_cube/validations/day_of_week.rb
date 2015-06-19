@@ -45,7 +45,7 @@ module IceCube
       end
 
       def build_s(builder)
-        builder.piece(:day_of_week) << "#{StringBuilder.nice_number(occ)} #{Date::DAYNAMES[day]}"
+        builder.piece(:day_of_week) << " 周#{StringBuilder.nice_number(occ)}的#{I18n.t("date.day_names")[day]} "
       end
 
       def build_hash(builder)
@@ -62,7 +62,7 @@ module IceCube
       end
 
       StringBuilder.register_formatter(:day_of_week) do |segments|
-        'on the ' + segments.join(' and ')
+        '的' + segments.join(' 和 ')
       end
 
     end
